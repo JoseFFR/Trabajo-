@@ -37,5 +37,16 @@ namespace ContosoUniversity.Models
         [DataType(DataType.Text)]
         public String Grade { get; set; }
 
+        /// <summary>
+        /// Relacion Student - Enrollment
+        /// </summary>
+        public virtual ICollection<Student> Students { get; set; }
+
+        /// <summary>
+        /// Relacion Course - Enrollment
+        /// </summary>
+        public virtual ICollection<Course> Courses { get; set; }
+
+
     }
 }

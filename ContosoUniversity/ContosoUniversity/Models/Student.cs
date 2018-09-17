@@ -14,6 +14,9 @@ namespace ContosoUniversity.Models
         [Key]
         public int Id { get; set; }
 
+        /// <summary>
+        /// Atributos con sus dataAnnotations
+        /// </summary>
         [Required(ErrorMessage = "El campo es obligatorio")]
         [StringLength(30, ErrorMessage = "la longitud del campo es de 30 caracteres" )]
         [DataType(DataType.Text)]
@@ -27,6 +30,7 @@ namespace ContosoUniversity.Models
         [Required(ErrorMessage = "El campo es obligatorio")]
         [DataType(DataType.Date)]
         public DateTime EnrollmentDate { get; set; }
+
 
         /// <summary>
         /// Relacion entre tablas Enrollment - Student
